@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Playlist example</title>
+        <link rel="stylesheet" href="inputcheck.css">
+        <script src="inputcheck.js"></script>
+    </head>
+    <body>
+
+        <form action="">
+            <table>
+                <tr>
+                    <td>Password (min 6 characters): </td>
+                    <td><input type="password" id="password1" size="10" placeholder="Password" onkeyup="checkPasswords()"></td>
+                    <td><div id="pw1_check" class="err"></div></td>
+                </tr>
+                <tr>
+                    <td>Repeat password: </td>
+                    <td><input type="password" id="password2" size="10" placeholder="Password" onkeyup="checkPasswords()"></td>
+                    <td><div id="pw2_check" class="err"></div></td>
+                </tr>
+            </table>
+            
+            <input type="submit" value="Submit" />
+        </form>
+
+    </body>
+</html>
+
