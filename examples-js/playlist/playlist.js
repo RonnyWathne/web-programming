@@ -3,7 +3,7 @@ function init() {
     button.onclick = handleButtonClick;
 }
 
-function handleButtonClick(e) {
+function handleButtonClick() {
     var textInput = document.getElementById("songTextInput");
     var songName = textInput.value;
 
