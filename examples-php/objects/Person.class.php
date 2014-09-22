@@ -27,8 +27,19 @@ class Person {
     }
 }
 
+// example usage
 $c = new Person("John", 32, 123);
 echo $c->getName() . "\n";
 Person::saySomething();
-    
+
+// storing Person objects in an array
+$persons = array();
+$persons[] = $c;
+$persons[] = new Person("Mary", 33, 122);
+$persons[] = new Person("Steve", 23, 999);
+
+for ($i = 0; $i < count($persons); $i++) {
+    echo $persons[$i]->getName() . "\n";
+}
+
 ?>
