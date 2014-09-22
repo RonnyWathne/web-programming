@@ -1,10 +1,9 @@
 <?php
-/*
-Arrays exercise 1
-
-2014-09-22
-*/
-
+/**
+ * Arrays exercise 1
+ *
+ * 2014-09-22
+ */
 
 /*
 The $prices array contains prices for products one can buy in a given shop. 

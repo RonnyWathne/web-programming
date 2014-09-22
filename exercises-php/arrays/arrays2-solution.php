@@ -1,9 +1,9 @@
 <?php
-/*
-Arrays exercise 2 - solution
-
-2014-09-22
-*/
+/**
+ * Arrays exercise 2 - solution
+ * 
+ * 2014-09-22
+ */
 
 /*
 Given an array of integers as parameter, find and output the mean and the 
