@@ -1,6 +1,6 @@
 <?php
 /*
-Arrays exercise 1
+Arrays exercise 1 - solution
 
 2014-09-22
 */
@@ -63,7 +63,27 @@ Array (
 function getItems($prices, $list) {
 	$items = array();
 	
-	// THIS IS FOR YOU TO COMPLETE
+	for ($i = 0;$i < count($list);$i++) {
+		$product = $list[$i];
+		if (array_key_exists($product, $prices)) {
+			// first time we see this product
+			if (!array_key_exists($product, $items)) {
+				$items[$product] = array(
+					"quantity" => 1,
+					"price" => $prices[$product],
+					"sum" => $prices[$product]
+				);
+			}
+			// we have seen it before
+			else {
+				$items[$product]['quantity']++;
+				$items[$product]['sum'] += $prices[$product];
+			}
+		}
+		else {
+			echo "warning: " . $product . " is not available\n";
+		}
+	}	
 
 	return $items;	
 }
@@ -95,7 +115,20 @@ SUM 30
 */
 
 function getMost($prices, $money) {
-	// THIS IS FOR YOU TO COMPLETE
+	// sort prices by value
+	asort($prices);
+	$sum = 0;
+	foreach ($prices as $product => $price) {
+		if ($sum + $price <= $money) {
+			$sum += $price;
+			echo $product . "\t" . $price . "\n";
+		}
+		// we don't need to iterate further if we reached the limit
+		else {		
+			break;
+		}
+	}
+	echo "SUM\t" . $sum . "\n";
 }
 
 getMost($prices, 30);
