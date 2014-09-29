@@ -1,1 +1,4 @@
 .DS_Store
+/examples-php/smarty/nbproject/private/
+/examples-php/smarty/smarty/cache/*
+/examples-php/smarty/smarty/templates_c/*
