@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sliding example</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#mydiv").click(function(){
+                    $(this).fadeOut("slow");
+                });
+            });
+        </script>
+        <style>
+            #mydiv {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+    </body>
+</html>
