@@ -25,8 +25,26 @@ $json = $twitter->setGetfield($getfield)
         ->performRequest();
 
 // convert JSON to associative array
-$twitter_data = json_decode($json, true);
-
-print_r($twitter_data);
+$data = json_decode($json, true);
 
 ?>
+
+<html>
+    <head>
+        <title>Twitter Search API</title> 
+    </head>
+    <body>
+        <table>
+            <?php
+            $tweets = $data['statuses'];
+            for ($i = 0; $i < count($tweets); $i++) {
+                echo '<tr><td><img src="' . $tweets[$i]['user']['profile_image_url'] . '"><br />'
+                . '<a href="' . $tweets[$i]['user']['url'] . '">@' 
+                . $tweets[$i]['user']['screen_name'] . '</a></td>'
+                . '<td><small>' . $tweets[$i]['created_at'] . '</small><br/>'
+                . $tweets[$i]['text'] . '</td></tr>';
+            }
+            ?>
+        </table>
+    </body>    
+</html>
