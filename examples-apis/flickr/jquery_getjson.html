@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Flickr with jQuery.getJSON</title>
+        <style>
+            img {
+                height: 200px;
+                float: left;
+            }
+        </style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var url = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+                var params = {
+                    tags: "stavanger",
+                    tagmode: "any",
+                    format: "json"
+                };
+                $.getJSON(url, params, function (result) {
+                    $.each(result.items, function (i, item) {
+                        $("<img>").attr("src", item.media.m).appendTo("#images");
+                        if (i === 4) {
+                            return false;
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>        
+        <div id="images"></div>
+    </body>
+</html>
