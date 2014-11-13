@@ -3,3 +3,4 @@
 /examples-php/smarty/smarty/cache/*
 /examples-php/smarty/smarty/templates_c/*
 /nbproject/private/
+.idea
