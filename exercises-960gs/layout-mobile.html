@@ -8,9 +8,11 @@
             .blue {
                 background-color: blue;
                 height: 60px;
+                margin-bottom: 10px;
             }
             .yellow, .green, .lightgreen, .orange {
                 height: 100px;
+                margin-bottom: 10px;
             }
             .yellow {
                 background-color: yellow;
@@ -28,57 +30,34 @@
                 background-color: grey;
                 height: 30px;
             }
-            /* add space around the clear div */
-            .clear {
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
         </style>
     </head>
     <body>
         <div class="container_12">
-            
-            <div class="grid_6">
+
+            <div class="grid_12">
+                <p>This is the mobile view. Here we simply adjusted what's visible to grid_12 and removed the rest.<br />
+                    Also, we moved the spacing (margins) from the clear class to the individual classes.</p></div>
+
+            <div class="clear"></div>
+
+            <div class="grid_12">
                 <div class="blue"></div>
             </div>
-            <div class="grid_6">
+            <div class="grid_12">
                 <div class="blue"></div>
             </div>
             
             <div class="clear"></div>
 
-            <div class="grid_4">
+            <div class="grid_12">
                 <div class="yellow"></div>
             </div>
-            <div class="grid_4">
+            <div class="grid_12">
                 <div class="yellow"></div>
             </div>
-            <div class="grid_4">
+            <div class="grid_12">
                 <div class="yellow"></div>
-            </div>
-
-            <div class="clear"></div>
-
-            <div class="grid_8">
-                <div class="green"></div>
-            </div>
-            <div class="grid_4">
-                <div class="lightgreen"></div>
-            </div>
-
-            <div class="clear"></div>
-
-            <div class="grid_3">
-                <div class="orange"></div>
-            </div>
-            <div class="grid_3">
-                <div class="orange"></div>
-            </div>
-            <div class="grid_3">
-                <div class="orange"></div>
-            </div>
-            <div class="grid_3">
-                <div class="orange"></div>
             </div>
 
             <div class="clear"></div>
